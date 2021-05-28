@@ -17,6 +17,10 @@
   border-radius: 10px;
 }
 
+.row {
+  margin: 10px ;
+}
+
 .formattedText {
   font: 50px Arial, sans-serif;
 }
