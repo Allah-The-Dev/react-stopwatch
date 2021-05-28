@@ -54,7 +54,7 @@ const useTimer = initialTimer => {
         const minutes = getLast2Digits(Math.floor((timer - hour * 3600) / 60));
         const seconds = getLast2Digits((timer - hour * 3600 - minutes * 60));
         setFormattedTime(`${hour}:${minutes}:${seconds}`);
-    }, [timer]);
+    }, [timer]); 
 
     return {buttonText, formattedTime, handleTimer, handleReset};
 };
