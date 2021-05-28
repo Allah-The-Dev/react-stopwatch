@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import useTimer from './custom-hooks/useTimer';
 
 function App() {
+  const {buttonText, formattedTime, handleTimer, handleReset} = useTimer(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="banner">
+        <div className="row">
+          <span className="formattedText">{formattedTime}</span>
+        </div>
+        <div className="row">
+          <button className="button" onClick={handleTimer}>{buttonText}</button>
+          <button className="button" onClick={handleReset}>Reset</button>
+        </div>
+      </div>
     </div>
   );
 }
